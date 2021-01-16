@@ -1,0 +1,29 @@
+<div class = "signup">
+	<div class = "reserve_background" id = "rsrvbg"></div>
+		<div id = "signupform">
+			<form method = "POST" action = "/signup">
+			<h2 id = "rsrv_head">Sign Up</h2>
+
+				<label for="fname"><b>First name</b></label>
+    			<input type="text" placeholder="Enter First name" name="fname" class = "linput" required>
+
+    			<label for="fname"><b>Last name</b></label>
+    			<input type="text" placeholder="Enter Last name" name="lname" class = "linput" required>
+
+    			<label for="bday"><b>Birthday</b></label>
+    			<input type="date" name="bday" class = "linput" required>
+
+    			<label for="email"><b>Email</b></label>
+    			<input type="text" placeholder="Enter Email" name="email" class = "linput" required>
+
+    			<label for="phone"><b>Contact Number</b></label>
+    			<input type="number" placeholder="Contact number" name="phone" class = "linput" required>
+
+				{{!-- <label for="uname"><b>Username</b></label>
+    			<input type="text" placeholder="Enter Username" name="uname" class = "linput" required> --}}
+
+    			<label for="psw"><b>Password</b></label>
+    			<input type="password" placeholder="Enter Password" name="psw" class = "linput" required>
+                <input type ="submit" id = "loginsubmit" value = "SUBMIT">
+			</form>
+		</div>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<div class = "user">
+	<div class = "profile-header">
+		<div class = "profile-img">
+			<img src = "css/assets/default.jpg" width = "200">
+		</div>
+		<div class = "profile-nav-info">
+			<h3 class = "username"> 
+				{{details.name}} {{details.lname}}
+			</h3>
+		</div>
+	</div>
+	<div class = "main-bd">
+		<div class = "left-side">
+			<div class = "profile-side">
+				<div class = "user-bio">
+					yo wut
+				</div>
+			</div>
+		</div>
+		<div class = "right-side">
+			<div class = "navigation">
+				<ul>
+					<li onclick = "tabs(0)" class = "user-reviews"> Reviews </li>
+					<li onclick = "tabs(1)" class = "user-reservations"> Reservations </li>
+				</ul>
+			</div>
+			<div class = "profile-body">
+				<div class = "profile-reviews tab">
+					<h1> REVIEWS </h1>
+					<table style="width:100%">
+						<tr>
+							<th style="text-align:center">Stars</th>
+							<th style="text-align:center">Comment</th>
+						</tr>
+					{{#each userReviews}}
+					<tr>
+						<td> {{this.stars}} </td>
+						<td> {{this.comment}} </td>
+					</tr>
+					{{/each}} 
+				</table>
+				</div>
+				<div class = "profile-reservations tab">
+					<h1> RESERVATIONS </h1>
+					<table style="width:100%">
+						<tr>
+							<th>Name</th>
+							<th>Date</th>
+							<th>Time</th>
+							<th>Number of People</th>
+							<th></th>
+						</tr>
+					{{#each userReservations}}
+					<tr>
+						<td> {{this.name}} </td>
+						<td> {{this.resDate}} </td>
+						<td> {{this.resTime}} </td>
+						<td> {{this.people}} </td>
+						<td><a href = "/deletereserve/{{this._id}}"><img src = "css/assets/trashbin.png"></a></td>
+					</tr>
+					{{/each}} 
+				</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src = "js/profile.js"></script>

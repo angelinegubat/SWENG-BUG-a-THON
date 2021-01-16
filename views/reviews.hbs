@@ -1,0 +1,57 @@
+<div class = "average_rating">
+    <div class = "rtingbg" id = "avg_background"></div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div id = "avg">
+        {{#each average}}
+        <script type="text/javascript">
+            var num = {{AverageValue}};
+            var ave = num.toFixed(2);
+            document.write(ave);
+        </script>    
+        {{/each}}
+            <span class="fa fa-star pass"></span>
+        </div>
+
+        <div id = "avg_subtext">
+            is our current average rating given to us by our diners.<br>
+            Check out our user reviews and leave one yourself below!
+        </div>
+</div>
+
+<div class = "rating">
+    <div class = "rtingbg" id = "rating_background"></div>
+    <div id = "ratelist">
+        <h1 id = "rate_head">CUSTOMER FEEDBACK</h1>
+        {{#each reviews}}
+        <div class = "submission">
+            <div class = "dp"></div>
+            <div class = "stars">
+                {{this.stars}}
+                <span class="fa fa-star pass"></span>
+            </div>
+            <div class = "review">
+                <h4 class = "review_name">{{this.name}}</h4>
+                <p class = "review_content">
+                    {{this.comment}}
+                </p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div class = "leave_review">
+    <div class = "rtingbg" id = "leave_background"></div>
+        <form method = "POST" action = "/review">
+            <div id = "review_form">
+                <h1 id = "review_head">LEAVE A REVIEW!</h1>
+                <p class = "label" id = "rate">Rating: </p>
+                <input type = "number" id = "reviewrate" name = "rate" min="1" max="5">
+                <!--<label for = "anonymity" id = "anon_label">Remain Anonymous</label><br>-->
+                <!--<input type = "checkbox" id = "anonymity" name = "anonymity" value = "Anonymous">-->
+                <p class = "label" id = "content_label">Review: </p>
+                <textarea id = "revcontent" name = "content" maxlength="200"></textarea>
+                <input type ="submit" id = "submit_rating_form" value = "SUBMIT">
+            </div>
+        </form>
+</div>

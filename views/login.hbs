@@ -1,0 +1,16 @@
+<div class = "login">
+	<div class = "reserve_background" id = "rsrvbg"></div>
+		<div id = "loginform">
+			<form method = "POST" action= "/login">
+			<h2 id = "rsrv_head">Login</h2>
+
+                <label for="uname"><b>Email Address</b></label>
+    			<input type="text" placeholder="Enter Email Address" name="email" id = "uname" required>
+
+    			<label for="psw"><b>Password</b></label>
+    			<input type="password" placeholder="Enter Password" name="psw" id = "pass" required>
+
+                <input type ="submit" id = "loginsubmit" value = "LOGIN">
+			</form>
+			<p id="error" class="error">{{error}}</p>
+		</div>

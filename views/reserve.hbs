@@ -1,0 +1,29 @@
+
+<div class = "reserve">
+		<div class = "reserve_background" id = "rsrvbg"></div>
+			<div id = "form" >
+                <form method = "POST" action = "/reserve">
+                    <h2 id = "rsrv_head">Reservation</h2>
+                    <h1 id = "book_head">BOOK TABLE</h1>
+
+                        <p class = "label" id = "date">Date</p>
+                        <input type = "date" id = "rsrvdate" name = "date">
+
+                        <p class = "label" id = "time">Time</p>
+                        <input type = "number" id = "rsrvtime" name = "time" min = "12" max="20">
+
+                        <p class = "label" id = "people">No. of People</p>
+                        <input type = "number" id = "rsrvppl" name = "people" min = "1" max="10">
+
+                        <p class = "label" id = "fullname">Name</p>
+                        <input type = "text" id = "rsrvname" name = "fullname">
+
+                        <p class = "label" id = "phoneno">Phone no.</p>
+                        <input type = "text" id = "rsrvphone" name = "phoneno">
+
+                        <p class = "label" id = "email">Email</p>
+                        <input type = "text" id ="rsrvmail" name = "email">
+
+                        <input type ="submit" id = "submit" value = "SUBMIT">
+            </form>
+            </div>

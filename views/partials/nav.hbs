@@ -1,0 +1,31 @@
+<header>
+		<nav class = "pages">
+			<h1 class="logo">
+				<a href="/"><img id = "newlogo" src = "css/assets/redlight.png"> </a>
+			</h1>
+
+			<ul>
+				<li><a href="/"><div class = "center">HOME</div></a></li>
+
+				<li><a href="/reserve"><div class = "center">RESERVE</div></a></li>
+
+				<li><a href="/review"><div class = "center">RATINGS</div></a></li>
+
+				{{#if details.flag}}
+					<li><a href = "/user"><div class = "center">{{details.name}}</div></a>
+					<ul>
+						<li><a href="/logout"><div class = "center">LOGOUT</div></a></li>
+						
+					</ul>
+				</li>
+				{{else}}
+				<li><a><div class = "center">ACCOUNT</div></a>
+					<ul>
+						<li><a href="/login"><div class = "center">LOGIN</div></a></li>
+						<li><a href="/signup"><div class = "center">SIGN UP</div></a></li>
+					</ul>
+				</li>
+				{{/if}}
+			</ul>
+		</nav>
+	</header>
