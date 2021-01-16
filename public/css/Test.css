@@ -1,0 +1,1210 @@
+@import url("https://fonts.googleapis.com/css?family=Oxanium&display=swap");
+
+/*Header and toolbar.*/
+header {
+	background-color: #0B0B0B;
+	position: absolute;
+	width: 100%;
+	z-index: 999;
+	height: 160px;
+	right: 0px;
+	top: 0px;
+	float: right;
+}
+
+.pages {
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	display: none;
+	z-index: auto;
+	font-size: 20px;
+	all: unset;
+	display: flex;
+	align-items: center;
+}
+
+.pages ul {
+	padding: 0px;
+	list-style: none;
+	text-align: center;
+}
+
+
+.pages ul li{
+	position: relative;
+	font-family: "Times New Roman";
+	font-weight: bold;
+	float: left;
+	width: 175px;
+	height: 37px;
+	margin-left: 5px;
+	left: 450px;
+}
+
+
+.pages ul li a{
+	color: #A31818;
+	text-transform: uppercase;
+	display: block;
+	height: 37px;
+	text-decoration: none;
+	border-radius: 20px;
+}
+
+
+.pages ul li a:hover {
+	font-weight: bold; 
+	background-color: #6D0202;
+	animation: onhover 0.5s linear;
+	color: white;
+}
+
+.pages ul li ul li {
+	position: relative;
+	display: none;
+	left: -9px;
+}
+
+.pages ul li:hover ul li {
+	display: block;
+}
+
+.pages-toggle {
+	display: none;
+}
+
+header {
+	display: flex;
+	grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+}
+
+.logo {
+	align-items: center;
+	margin-right: 20px;
+}
+
+header img {
+	position: relative;
+	height: 100px;
+	width: 275px;
+	margin-right: 20px;
+	left: 89px;
+}
+
+.center {
+	position: relative;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+}
+
+@keyframes onhover {
+	from {background-color: transparent;}
+	to {background-color: #6D0202;}
+
+	from {color: #A31818;}
+	to {color: white;}
+}
+
+body {
+	background-color: #0B0B0B;
+	width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+/*Upper part of main page.*/
+.upper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	text-align: center;
+	left: 0px;
+}
+
+.upper:hover #subtext{
+	color: grey;
+	animation: hideupper 0.5s;
+	opacity: 0;
+}
+
+.upper:hover #upperbg{
+	animation: hideupper 0.5s;
+	opacity: 0;
+}
+
+.upper:hover #header{
+	animation: hideupper 0.5s;
+	opacity: 0;
+}
+
+@keyframes hideupper {
+	from {color: grey;}
+	to {color: grey;}
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+.background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url("assets/redbg.jpg");
+	background-size: 100%;
+	left: 0px;
+	top: 160px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	animation: bganimation 2s;
+}
+
+#upperbg {
+	filter: contrast(35%) blur(11px) brightness(50%);
+}
+
+#header {
+	position: absolute;
+	font-family: "Times New Roman Condensed";
+	font-size: 72px;
+  	top: 50%;
+  	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: headercolor 0.5s;
+	color: #A31818;
+}
+
+#subtext {
+	position: absolute;
+	font-family: "Arial Narrow";
+	font-size: 20px;
+	top: 67%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: fadesub 0.5s;
+	color: white;
+}
+
+@keyframes bganimation {
+	from {filter: contrast(50%) blur(0) brightness(70%);}
+    to {filter: contrast(35%) blur(11px) brightness(50%);}
+}
+
+@keyframes fadeheader {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fadesub {
+	0% {opacity: 0;}
+	15% {opacity: 0;}
+	35% {opacity: 0;}
+	60% {opacity: 0.6;}
+	75% {opacity: 0.75;}
+	90% {opacity: 0.9;}
+	100% {opacity: 1;}
+}
+
+@keyframes headercolor {
+	from {color: white;}
+	to {color: #A31818;}
+}
+
+/*About only visible on-hover*/
+.about {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	text-align: center;
+	left: 0px;
+}
+
+#aboutbg {
+	filter: contrast(35%) blur(11px) brightness(50%) grayscale(50%);
+}
+
+#abouttext {
+	position: absolute;
+	font-family: "Times New Roman Condensed";
+	font-size: 48px;
+  	top: 300px;
+  	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	animation: fadeheader 0.5s;
+}
+
+#abouthead {
+	position: absolute;
+	font-family: "Times New Roman Condensed";
+	font-size: 72px;
+  	top: 50%;
+  	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	animation: fadeheader 0.5s;
+}
+
+#info {
+	position: absolute;
+	margin-left: 175px;
+	margin-right: 175px;
+	font-family: "Arial Narrow";
+	font-size: 24px;
+	top: 63%;
+	left: 10px;
+	color: white;
+	animation: fadesub 0.5s;
+}
+
+/*Part dedicated to menu.*/
+.menu {
+	position: absolute;
+	background-color: white;
+	top: 841px;
+	width: 100%;
+	left: 0px;
+	height: 2750px;
+	box-shadow: 5px 5px 5px 5px white;
+}
+
+.cntr_img {
+	position: relative;
+	display: block;
+  	margin-left: auto;
+	margin-right: auto;
+	top: 20px;
+}
+
+.categories {
+	position: relative;
+	text-align: center;
+	z-index: auto;
+	all: unset;
+	display: flex;
+	align-items: center;
+}
+
+.categories ul {
+	position: relative;
+	padding: 0px;
+	list-style: none;
+	text-align: center;
+	display: block;
+  	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.categories ul li{
+	position: relative;
+	font-family: 'Arial';
+	font-weight: bold;
+	float: left;
+	width: 139px;
+	height: 37px;
+	margin-left: 9px;
+}
+
+.categories ul li a{
+	background-color: white;
+	color: #6D0202;
+	text-transform: uppercase;
+	display: block;
+	height: 30px;
+	text-decoration: none;
+	border-style: solid;
+	border-width: 2.7px;
+	border-color: #6D0202;
+	border-radius: 20px;
+}
+
+.categories ul li a:hover {
+	font-weight: bold; 
+	color: white;
+	background-color: #6D0202;
+	border-color: #6D0202;
+	animation: cathover 0.2s linear;
+}
+
+@keyframes cathover {
+	from {background-color: white;}
+	to {background-color: #6D0202;}
+
+	from {color: #6D0202;}
+	to {color: white;}
+}
+
+.fooditem {
+	position: relative;
+	height: 450px;
+	float: left;
+	top: 50px;
+	background-color: white;
+	width: 300px;
+	margin-left: 50px;
+	margin-top: 50px;
+	box-shadow: 0 4px 8px 0  rgba(0, 0, 0, 0.09);
+}
+
+.foodhead {
+	font-family: "Arial";
+	font-weight: bold;
+	color: #6D0202;
+}
+
+#type {
+	position: relative;
+	top: 20px;
+	text-align: center;
+}
+
+.foodimg {
+	display: block;
+	position: relative;
+	height: 200px;
+	width: 200px;
+	top: 50px; 
+	margin: auto;
+	border-radius: 50%;
+}
+
+.foodbody {
+	font-family: "Arial";
+	position: relative;
+	top: 55px;
+	margin: auto;
+	text-align: center;
+}
+
+#name {
+	font-family: "Times New Roman Condensed";
+	position: relative;
+	font-size: 20px;
+	color: #6D0202;
+	font-weight: 900;
+}
+
+#price {
+	position: relative;
+	bottom: 20px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #A31818;
+}
+
+#desc{
+	position: relative;
+	font-size: 12px;
+	font-style: italic;
+	color: gray;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+/*Start of chefs portion.*/
+.chefs {
+	position: absolute;
+	background-color: #0B0B0B;
+	top: 3591px;
+	width: 100%;
+	left: 0px;
+	height: 900px;
+	box-shadow: 5px 5px 5px 5px white;
+}
+
+.chefbox {
+	position: relative;
+	background-color: #0B0B0B;
+	width: 40%;
+	height: 300px;
+	margin-top: 75px;
+	border-radius: 10px;
+	box-shadow: 0 6px 11px 0  rgba(225, 225, 225, 0.10);
+}
+
+.chefbg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-color: transparent;
+	border-width: 2.5px;
+	border-radius: 10px;
+	background-size: 100%;
+	filter: blur(3px) brightness(30%);
+}
+
+.chefimg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+
+.chefrole {
+	font-family: "Times New Roman Condensed";
+	position: absolute;
+	width: 35%;
+	height: 7%;
+	top: 25px;
+	color: white;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.chefname {
+	font-family: "Times New Roman Condensed";
+	position: absolute;
+	width: 40%;
+	height: 10%;
+	top: 42px;
+	color: white;
+	font-weight: normal;
+	font-size: 24px;
+}
+
+.bio {
+	font-family: "Arial Narrow";
+	position: absolute;
+	width: 45%;
+	height: 50%;
+	top: 130px;
+	right: 50px;
+	color: white;
+	font-weight: normal;
+	font-size: 16px;
+	text-align: center;
+}
+
+/*This is for Gordon.*/
+#bg1 {
+	background-image: url("assets/chefbg1.jpg");
+}
+
+#chef1 {
+	background-image: url("assets/gordon.png");
+}
+
+#role1 {
+	right: 55px;
+}
+
+#name1 {
+	right: 57px;
+}
+
+/*This is for Roger.*/
+#bg2 {
+	background-image: url("assets/chefbg2.jpg");
+}
+
+#chef2 {
+	background-image: url("assets/roger.png");
+	right: 65px;
+}
+
+#role2 {
+	right: 75px;
+}
+
+#name2 {
+	right: 40px;
+}
+
+/*This is for Caesar.*/
+#bg3 {
+	background-image: url("assets/chefbg3.jpg");
+}
+
+#chef3 {
+	background-image: url("assets/caesar.png");
+	right: 250px;
+}
+
+#role3 {
+	right: 55px;
+}
+
+#name3 {
+	right: 20px;
+	width: 50%;
+}
+
+#gordon {
+	visibility: visible;
+	float: left;
+	margin-left: 77px;
+}
+
+#roger {
+	visibility: visible;
+	float: right;
+	margin-right: 77px;
+}
+
+#caesar {
+	visibility: visible;
+	float: left;
+	left: 30%;
+}
+
+/*Footer related info.*/
+footer {
+	font-family: Arial;
+	position: absolute;
+	background-color: #0B0B0B;
+	color: white;
+	top: 4450px;
+  	width: 100%;
+	height: 42px;    
+	left: 0px;    
+	bottom: 0;    
+	font-size: 14px;
+}
+
+#contactno {
+	top: 0%;
+	position: relative;
+	left: 20px;
+	float: left;
+}
+
+#misc {
+	top: 0%;
+	position: relative;
+	right: 20px;
+	float: right;
+}
+
+/*For Reserve.html: */
+
+.reserve_background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url("assets/chefbg3.jpg");
+	background-size: 100%;
+	left: 0px;
+	top: 160px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+#rsrvbg {
+	filter: contrast(50%) blur(11px) brightness(50%) grayscale(20%);
+}
+
+#form {
+	position: relative;
+	width: 800px;
+	height: 400px;
+	top: 300px;
+	margin: auto;
+	border-radius: 20px;
+	background-color: white;
+}
+
+#loginform {
+	position: relative;
+	width: 300px;
+	height: 400px;
+	top: 300px;
+	margin: auto;
+	border-radius: 20px;
+	background-color: white;
+	padding-left: 5px;
+}
+
+#rsrv_head {
+	position: relative;
+	text-align: center;
+	font-family: "Brush Script MT";
+	font-size: 28px;
+	color: #A31818;
+	width: 200px;
+	height: 50px;
+	top: 20px;
+	margin: auto;
+}
+
+#book_head {
+	position: relative;
+	text-align: center;
+	font-family: "Arial";
+	font-weight: bold;
+	font-size: 36px;
+	color: black;
+	width: 400px;
+	height: 50px;
+	margin: auto;
+}
+
+.label {
+	color: black;
+	position: absolute;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+#date {
+	color: black;
+	margin-left: 50px;
+}
+
+#rsrvdate {
+	position: absolute;
+	margin-left: 50px;
+	top: 140px;
+	border-radius: 5px;
+	height: 26px;
+	width: 150px;
+	border-style: solid;
+	border-color: grey;
+}
+
+#time {
+	color: black;
+	margin-left: 300px;
+}
+
+#rsrvtime {
+	position: absolute;
+	margin-left: 300px;
+	top: 140px;
+	border-radius: 5px;
+	height: 26px;
+	width: 150px;
+	border-style: solid;
+	border-color: grey;
+}
+
+#people {
+	color: black;
+	margin-left: 550px;
+}
+
+#rsrvppl {
+	position: absolute;
+	margin-left: 550px;
+	top: 140px;
+	border-radius: 5px;
+	height: 26px;
+	width: 150px;
+	border-style: solid;
+	border-color: grey;
+}
+
+#fullname {
+	color: black;
+	top: 200px;
+	margin-left: 50px;
+}
+
+#rsrvname {
+	position: absolute;
+	top: 240px;
+	margin-left: 50px;
+	border-radius: 5px;
+	height: 26px;
+	width: 150px;
+	border-style: solid;
+	border-color: grey;
+}
+
+#phoneno {
+	color: black;
+	top: 200px;
+	margin-left: 300px;
+}
+
+#rsrvphone {
+	position: absolute;
+	top: 240px;
+	margin-left: 300px;
+	border-radius: 5px;
+	height: 26px;
+	width: 150px;
+	border-style: solid;
+	border-color: grey;
+}
+
+#email {
+	color: black;
+	top: 200px;
+	margin-left: 550px;
+}
+
+#rsrvmail {
+	position: absolute;
+	top: 240px;
+	margin-left: 550px;
+	border-radius: 5px;
+	height: 26px;
+	width: 150px;
+	border-style: solid;
+	border-color: grey;
+}
+
+#submit {
+	position: relative;
+	top: 225px;
+	left: 350px;
+	border-radius: 5px;
+	height: 26px;
+	width: 100px;
+	font-weight: 300;
+	color: white;
+	font-size: 18px;
+	background-color: black;
+}
+
+#submit:hover {
+	color: red;
+}
+
+/*For Rating.html: */
+
+#avg_background { 
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url("assets/chefbg1.jpg");
+	background-size: 100%;
+	left: 0px;
+	top: 160px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	filter: contrast(50%) blur(11px) brightness(50%) grayscale(40%);
+}
+
+#avg {
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	top: 300px;
+	text-align: center;
+	font-family: "Times New Roman";
+	color: white;
+	font-weight: bold;
+	font-size: 200px;
+}
+
+#avg_subtext {
+	position: relative;
+	width: 780px;
+	height: 93px;
+	top: 550px;
+	margin: auto;
+	text-align: center;
+	font-family: "Arial Narrow";
+	color: white;
+	box-shadow: 0 4px 8px 0  rgba(0, 0, 0, 1);
+	border-radius: 20px;
+	font-weight: 600;
+	font-size: 32px;
+}
+
+#rating_background {
+	position: absolute;
+	width: 1000px;
+	height: 1500px;
+	background-image: url("assets/chefbg2.jpg");
+	background-size: 100%;
+	left: 0px;
+	top: 890px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.rtingbg {
+	filter: contrast(70%) blur(11px) brightness(50%) grayscale(20%);
+}
+
+#ratelist {
+	position: relative;
+	width: 1100px;
+	height:1000px;
+	top: 850px;
+	margin: auto;
+	border-radius: 20px;
+	background-color: white;
+	color: black;
+}
+
+#rate_head {
+	position: relative;
+	text-align: center;
+	font-family: "Times New Roman";
+	font-weight: 300;
+	font-size: 36px;
+	color: black;
+	width: 800px;
+	height: 50px;
+	margin: auto;
+	top: 25px;
+}
+
+.submission {
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background-color: white;
+	margin-left: 50px;
+	margin-top: 50px;
+	float: left;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px 0  rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+.dp {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	box-shadow: 0 4px 8px 0  rgba(0, 0, 0, 0.3);
+	margin: auto;
+	background-image: url("assets/default.jpg");
+	background-size: 100%;
+	top: 50px;
+	border-radius: 50%;
+}
+
+.stars {
+	position: relative;
+	width: 50px;
+	height: 18px;
+	background-color: white;
+	margin: auto;
+	text-align: center;
+	border-radius: 10px;
+	top: 70px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgray;
+	font-family: "Times New Roman";
+	color: red;
+}
+
+.pass {
+	color: red;
+}
+
+.review {
+	position: relative;
+	width: 250px;
+	height: 170px;
+	background-color: white;
+	margin: auto;
+	top: 90px;
+	border-radius: 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgray;
+}
+
+.review_name {
+	position: relative;
+	font-family: "Arial Narrow";
+	top: 0px;
+	color: grey;
+	font-size: 16px;
+}
+
+.review_content {
+	position: relative;
+	font-family: "Arial Narrow";
+	color: black;
+	font-size: 15px;
+	font-style: italic;
+	font-weight: 500;
+	margin: auto;
+}
+
+#leave_background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url("assets/chefbg3.jpg");
+	background-size: 100%;
+	left: 0px;
+	top: 2050px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+#review_form {
+	position: relative;
+	width: 800px;
+	height: 400px;
+	top: 1050px;
+	margin: auto;
+	border-radius: 20px;
+	background-color: white;
+}
+
+#review_head {
+	position: relative;
+	text-align: center;
+	font-family: "Arial";
+	font-weight: bold;
+	font-size: 36px;
+	color: black;
+	width: 400px;
+	height: 50px;
+	margin: auto;
+	top: 20px;
+}
+
+#rate {
+	color: black;
+	margin-left: 50px;
+	top: 80px;
+}
+
+#anonymity {
+	position: absolute;
+	left: 610px;
+	top: 85px;
+}
+
+#anon_label { 
+	position: absolute;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	left: 630px;
+	top: 86px;
+}
+
+#reviewrate {
+	position: absolute;
+	margin-left: 140px;
+	top: 75px;
+	border-radius: 5px;
+	height: 26px;
+	width: 50px;
+	text-align: center;
+	border-style: solid;
+	border-color: grey;
+}
+
+#content_label {
+	color: black;
+	margin-left: 50px;
+	top: 120px;
+}
+
+#revcontent {
+	position: absolute;
+	margin-left: 50px;
+	top: 140px;
+	border-radius: 5px;
+	height: 200px;
+	width: 700px;
+	border-style: solid;
+	border-color: grey;
+	resize: none;
+}
+
+#submit_rating_form {
+	position: relative;
+	top: 305px;
+	left: 350px;
+	border-radius: 5px;
+	height: 26px;
+	width: 100px;
+	font-weight: 300;
+	color: white;
+	font-size: 18px;
+	background-color: black;
+}
+
+#submit_rating_form:hover {
+	color: red;
+	height: 29px;
+	width: 103px;
+}
+
+#uname, #pass {
+	position: relative;
+	bottom: 10px;
+  	width: 90%;
+  	padding: 10px 10px;
+  	margin: 8px;
+  	display: inline-block;
+  	border: 1px solid #ccc;
+  	box-sizing: border-box;
+  	border-style: solid;
+  	border-color: grey
+}
+
+.linput {
+	position: relative;
+	bottom: 10px;
+  	width: 90%;
+  	padding: 10px 10px;
+  	margin: 8px;
+  	display: inline-block;
+  	border: 1px solid #ccc;
+  	box-sizing: border-box;
+  	border-style: solid;
+  	border-color: grey
+}
+
+#loginsubmit {
+	position: center;
+	top: 225px;
+	left: 400px;
+	border-radius: 5px;
+	height: 26px;
+	width: 100px;
+	font-weight: 300;
+	color: white;
+	font-size: 18px;
+	background-color: black;
+}
+
+#signupform {
+	position: relative;
+	width: 500px;
+	height: 700px;
+	top: 300px;
+	margin: auto;
+	border-radius: 20px;
+	background-color: white;
+	padding-left: 5px;
+}
+
+.user {
+	padding-top: 150px;
+	position: flex;
+	background-color: #FFFFFF;
+
+}
+
+/*user page*/
+
+.profile-header {
+	background: #000;
+	width: 100%;
+	display: flex;
+	height: 198px;
+	position: relative;
+}
+
+.profile-header h3 {
+	margin-left: 100px
+}
+
+.profile-img {
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+.profile-img img {
+	border-radius: 50%;
+	height: 230px;
+	width: 230px;
+	border: 4px solid #000;
+	position: absolute;
+	left: 50px;
+	top: 20px;
+	z-index: 5;
+	background: #000;
+}
+
+.profile-nav-info {
+	float: left;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 60px;
+}
+
+.profile-nav-info h3 {
+	font-variant: small-caps;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.main-bd {
+	width: 100%;
+	display: flex;
+	padding-right: 15px;
+}
+
+.right-side {
+	width: 100%;
+}
+.profile-side {
+	height: 100%;
+	width: 300px;
+	background: #EEE;
+	padding: 90px 30px 20px;
+	margin-left: 18px;
+}
+
+.profile-side p {
+	margin-bottom: 7px;
+	color: #333;
+	font-size: 14px;
+}
+
+.navigation {
+	width: 100%;
+	z-index: -1;
+}
+
+.navigation ul {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	height: 40px;
+	background: #AAA;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+}
+
+.navigation ul li {
+	padding: 10px;
+	width: 100%;
+	cursor: pointer;
+	text-align: center;
+	transition: all .2s ease-in-out;
+}
+
+.navigation ul li.active,
+.navigation ul li:hover {
+	box-shadow: 0px -3px 0px rgba(288, 0, 70, .9) inset;
+}
+
+.profile-body {
+	width: 100%;
+	z-index: -1;
+}
+
+.tab {
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	display:none;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align:center;
+  }
